@@ -35,7 +35,7 @@ if (isset($_POST['send'])) {
         $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES, 'UTF-8' );
 
         // Email receivers
-        $to_emails = "anonymous1@example.com, anonymous2@example.com";
+        $to_emails = "tedxvbit@gmail.com";
 
         $subject = 'Contact form sent from ' . $name;
         $message = "From: {$name}";
