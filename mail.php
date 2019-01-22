@@ -14,6 +14,16 @@ $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 echo "Thank You!";
 ?>
+$mail_result = mail($_MAILTO, $_SUBJECT, $_FORMCONTENT, $_MAILHEADER);
+if ($mail_result) {
+    echo <<<HTML
+<div>Mail was successfully sent!</div>
+HTML;
+} else {
+    echo <<<HTML
+<div>Sending mail failed!</div>
+HTML;
+}
 
 </body>
 </html>
